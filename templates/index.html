@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+  <!-- Tab tittle -->
+        
+         <title>www.carseller.com</title>
+        
+        <!-- Page Head -->
+    
+         <h1 id = "head">Car Seller</h1>
+        
+        <div style="color: black" >
+            
+                <!--slogun -->
+                    
+            <form action="{{url_for('predict')}}" method="post">
+              
+                <h3 style="color:white" >Customers satisfaction is you first policy &#128516;</h3>
+                
+                <!-- Scrolling tab -->
+                
+                <marquee behavior="scroll" direction="left" style="background-color:tomato;">   In 1897, the first car ran on an Indian road. Through the 1930s, cars were imports only, and in small numbers. An embryonic automotive industry emerged in India in the 1940s. Hindustan Motors was launched in 1942, long-time competitor Premier in 1944, building Chrysler, Dodge, and Fiat products respectively.</marquee>
+                
+                <!-- Form -->
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Year</h3>
+            <input id="first" name="Year" type="number ">
+            <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
+            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
+            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
+            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="cng">CNG</option>
+            </select>
+            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <h3>Transmission type</h3><br><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br>
+             
+
+
+
+        </form>
+
+
+
+        <br><br><h3 style="color:yellow">{{prediction_text}}<h3>
+        
+        
+          <footer>
+                <p></p>
+                <p id="foot" style="color: white">Copy rights ©  <br>We respect your privacy. The information you submit is secure and will only be used to communicate with you about your reservation. <a href="harshtitto@gmail.com">Here you can mail us. </a></p>
+  </footer>
+  
+
+
+    </div>
+
+
+
+
+    <style>
+         <!-- Menu bar css -->
+            .topnav {
+                background-color: #333;
+                overflow: hidden;
+                    }
+
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                      }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+                            }
+
+
+            .topnav a.active {
+                background-color: black;
+                color: blue;
+                            }
+   
+            
+            body{
+                background: linear-gradient(to bottom, #00c6ff 30%, black 70% );
+                text-align: center;
+                padding: 0px;
+                
+            }
+             #fuel{
+                     font-size: 15px;
+                width: 99px;
+                top: 23px;
+                text-align: center;
+                border-radius: 18px;
+            }
+            #fuel:hover{
+                background-color: slategray;
+            }
+            #seller{
+                font-size: 15px;
+                width: 99px;
+                top: 23px;
+                text-align: center;
+                border-radius: 18px;
+            }
+            #seller:hover{
+                background-color: slategray;
+            }
+            #transmission{
+                font-size: 15px;
+                width: 99px;
+                top: 23px;
+                text-align: center;
+                border-radius: 18px;
+                
+            }
+            #transmission:hover{
+                background-color: slategray;
+            }
+            @keyframes glowing {
+            0% {
+                background-color: lightgray;
+                box-shadow: 0 0 5px white;
+            }
+            50% {
+                background-color: gray;
+                box-shadow: 0 0 20px gray;
+            }
+            100% {
+                background-color: skyblue;
+                box-shadow: 0 0 5px burlywood;
+            }
+            }
+            #sub {
+                animation: glowing 1200ms infinite;
+            }
+            
+            #head {
+                animation: glowing 2200ms infinite;
+                height: 20[x]
+            }
+            #foot{
+                background-color:black;
+                height: 20[x]
+            }
+      <!-- -->
+           
+        
+        </style>
+</body>
+
+</html>
